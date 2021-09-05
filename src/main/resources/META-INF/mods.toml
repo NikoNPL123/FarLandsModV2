@@ -1,12 +1,13 @@
 modLoader="javafml" #mandatory
-loaderVersion="[37,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+issueTrackerURL="https://github.com/ThisTestUser/FarLandsModV2/issues"
 license="All rights reserved"
 [[mods]] #mandatory
 modId="farlandsmod" #mandatory
 version="1.0" #mandatory
-displayName="Far Lands Mod for 1.17.1" #mandatory
+displayName="Far Lands Mod for 1.16.5" #mandatory
 credits="Original author is ThisTestUser. Thanks!" #optional
 authors="NikoN, sourcecode: ThisTestUser" #optional
 description='''
-1.17.1 port of ThisTestUser's far lands mod.
+1.16.5 port of ThisTestUser's far lands mod.
 '''
