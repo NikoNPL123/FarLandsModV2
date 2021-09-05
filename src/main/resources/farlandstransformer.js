@@ -33,7 +33,7 @@ function initializeCoreMod() {
 							if (instruction.getOpcode() == INVOKESTATIC &&
 								instruction.owner.equals("net/minecraft/world/gen/OctavesNoiseGenerator") &&
 								instruction.desc.equals("(D)D")) {
-								instruction.owner = "com/thistestuser/farlands/Config";
+								instruction.owner = "com/niko/farlands/Config";
 								instruction.name = "maintainPrecision";
 								pass = true;
 							}
@@ -60,7 +60,7 @@ function initializeCoreMod() {
 							if (instruction.getOpcode() == INVOKESTATIC &&
 								instruction.owner.equals("net/minecraft/world/gen/OctavesNoiseGenerator") &&
 								instruction.desc.equals("(D)D")) {
-								instruction.owner = "com/thistestuser/farlands/Config";
+								instruction.owner = "com/niko/farlands/Config";
 								instruction.name = "maintainPrecision";
 								pass = true;
 							}
@@ -86,12 +86,12 @@ function initializeCoreMod() {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst.getClass() == double_ldc.cst.getClass() &&
 							instruction.cst == 60000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust6E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst.getClass() != integer_ldc.cst.getClass() &&
 							instruction.cst == 60000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust6E7F", "()F", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -111,11 +111,11 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 60000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust6E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}else if (instruction.getOpcode() == LDC && instruction.cst == 29999984) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust2984", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -135,7 +135,7 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 60000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust6E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -155,7 +155,7 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 29999984) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust2984", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -175,7 +175,7 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 29999984) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust2984", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -195,15 +195,15 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == -30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN3E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust3E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 29999872) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust29872D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -223,7 +223,7 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust3E7D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -243,11 +243,11 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == -30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -267,19 +267,19 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == -30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}else if (instruction.getOpcode() == LDC && instruction.cst == -20000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN2E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 20000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust2E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -299,11 +299,11 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == -30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst == 30000000) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust3E7I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -326,17 +326,17 @@ function initializeCoreMod() {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst.getClass() == double_ldc.cst.getClass() &&
 							instruction.cst == -29999999) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjustN29D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}else if (instruction.getOpcode() == LDC && instruction.cst.getClass() == double_ldc.cst.getClass() &&
 							instruction.cst == 29999999) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust29D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						} else if (instruction.getOpcode() == LDC && instruction.cst.getClass() == integer_ldc.cst.getClass() &&
 							instruction.cst == 29999999) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust29I", "()I", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -356,7 +356,7 @@ function initializeCoreMod() {
 					for (var i = 0; i < arrayLength; i++) {
 						var instruction = methodNode.instructions.get(i);
 						if (instruction.getOpcode() == LDC && instruction.cst == 29999872) {
-							var replace = new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							var replace = new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"adjust29872D", "()D", false);
 							methodNode.instructions.set(instruction, replace);
 						}
@@ -375,12 +375,12 @@ function initializeCoreMod() {
 					if (methodNode.name.equals(ASMAPI.mapMethod("func_202424_a"))) {
 						var list = new InsnList();
 						list.add(new VarInsnNode(ILOAD, 3));
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 							"getOffsetXM", "()I", false));
 						list.add(new InsnNode(IADD));
 						list.add(new VarInsnNode(ISTORE, 3));
 						list.add(new VarInsnNode(ILOAD, 4));
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 							"getOffsetZM", "()I", false));
 						list.add(new InsnNode(IADD));
 						list.add(new VarInsnNode(ISTORE, 4));
@@ -389,12 +389,12 @@ function initializeCoreMod() {
 						methodNode.name.equals(ASMAPI.mapMethod("func_202427_a"))) {
 						var list = new InsnList();
 						list.add(new VarInsnNode(ILOAD, 3));
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 							"getOffsetX", "()I", false));
 						list.add(new InsnNode(IADD));
 						list.add(new VarInsnNode(ISTORE, 3));
 						list.add(new VarInsnNode(ILOAD, 4));
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 							"getOffsetZ", "()I", false));
 						list.add(new InsnNode(IADD));
 						list.add(new VarInsnNode(ISTORE, 4));
@@ -420,27 +420,27 @@ function initializeCoreMod() {
 					if (!foundX && instruction.getOpcode() == GETFIELD && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 						instruction.name.equals(ASMAPI.mapField("field_77276_a"))) {
 						var list = new InsnList();
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetX", "()I", false));
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetX", "()I", false));
 						list.add(new InsnNode(IADD));
 						methodNode.instructions.insert(instruction, list);
 						foundX = true;
 					} else if (!foundZ && instruction.getOpcode() == GETFIELD && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 						instruction.name.equals(ASMAPI.mapField("field_77275_b"))) {
 						var list = new InsnList();
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetZ", "()I", false));
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetZ", "()I", false));
 						list.add(new InsnNode(IADD));
 						methodNode.instructions.insert(instruction, list);
 						foundZ = true;
 					} else if (instruction.getOpcode() == INVOKEVIRTUAL && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 						instruction.name.equals(ASMAPI.mapMethod("func_180334_c"))) {
 						var list = new InsnList();
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetXM", "()I", false));
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetXM", "()I", false));
 						list.add(new InsnNode(IADD));
 						methodNode.instructions.insert(instruction, list);
 					} else if (instruction.getOpcode() == INVOKEVIRTUAL && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 						instruction.name.equals(ASMAPI.mapMethod("func_180333_d"))) {
 						var list = new InsnList();
-						list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetZM", "()I", false));
+						list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetZM", "()I", false));
 						list.add(new InsnNode(IADD));
 						methodNode.instructions.insert(instruction, list);
 					}
@@ -473,12 +473,12 @@ function initializeCoreMod() {
 						if(shiftCount > 1) {
 							var list = new InsnList();
 							list.add(new VarInsnNode(ILOAD, xLoc));
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"getOffsetX", "()I", false));
 							list.add(new InsnNode(IADD));
 							list.add(new VarInsnNode(ISTORE, xLoc));
 							list.add(new VarInsnNode(ILOAD, zLoc));
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"getOffsetZ", "()I", false));
 							list.add(new InsnNode(IADD));
 							list.add(new VarInsnNode(ISTORE, zLoc));
@@ -515,12 +515,12 @@ function initializeCoreMod() {
 						if(shiftCount > 1) {
 							var list = new InsnList();
 							list.add(new VarInsnNode(ILOAD, xLoc));
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"getOffsetX", "()I", false));
 							list.add(new InsnNode(IADD));
 							list.add(new VarInsnNode(ISTORE, xLoc));
 							list.add(new VarInsnNode(ILOAD, zLoc));
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config",
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config",
 								"getOffsetZ", "()I", false));
 							list.add(new InsnNode(IADD));
 							list.add(new VarInsnNode(ISTORE, zLoc));
@@ -548,14 +548,14 @@ function initializeCoreMod() {
 						if (!foundX && instruction.getOpcode() == INVOKEVIRTUAL && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 							instruction.name.equals(ASMAPI.mapMethod("func_180334_c"))) {
 							var list = new InsnList();
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetXM", "()I", false));
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetXM", "()I", false));
 							list.add(new InsnNode(IADD));
 							methodNode.instructions.insert(instruction, list);
 							foundX = true;
 						} else if (!foundZ && instruction.getOpcode() == INVOKEVIRTUAL && instruction.owner.equals("net/minecraft/util/math/ChunkPos") &&
 							instruction.name.equals(ASMAPI.mapMethod("func_180333_d"))) {
 							var list = new InsnList();
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetZM", "()I", false));
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetZM", "()I", false));
 							list.add(new InsnNode(IADD));
 							methodNode.instructions.insert(instruction, list);
 							foundZ = true;
@@ -581,9 +581,9 @@ function initializeCoreMod() {
 					if (instruction.getOpcode() == ISHL) {
 						var list = new InsnList();
 						if(passOne)
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetZM4", "()I", false));
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetZM4", "()I", false));
 						else
-							list.add(new MethodInsnNode(INVOKESTATIC, "com/thistestuser/farlands/Config", "getOffsetXM4", "()I", false));
+							list.add(new MethodInsnNode(INVOKESTATIC, "com/niko/farlands/Config", "getOffsetXM4", "()I", false));
 						list.add(new InsnNode(IADD));
 						methodNode.instructions.insert(instruction, list);
 						passOne = true;
